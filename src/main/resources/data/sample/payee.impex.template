@@ -1,0 +1,2 @@
+INSERT_UPDATE Payee; name[unique = true];
+                   ; Spar               ;

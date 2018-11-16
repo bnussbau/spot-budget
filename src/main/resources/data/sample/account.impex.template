@@ -1,0 +1,2 @@
+INSERT_UPDATE Account; name[unique = true]; description; active[default = true]
+                     ; CASH               ; Cash       ;

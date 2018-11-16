@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://spot-next.io/schemas/v2/itemtypes.xsd">
+
+    <type name="Transaction" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="payee" type="Payee">
+                <description>Unique Payee name</description>
+                <annotations>
+                    <annotation javaClass="javax.validation.constraints.NotNull"/>
+                </annotations>
+            </property>
+            <property name="account" type="Account">
+                <description>Transaction account</description>
+            </property>
+            <property name="amount" type="Double">
+                <description>Transaction amount</description>
+            </property>
+            <property name="date" type="LocalDateTime">
+                <description>Tansaction date</description>
+            </property>
+        </properties>
+    </type>
+    <type name="Payee" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="name" type="String">
+                <description>Unique, notnull name of Payee</description>
+                <modifiers unique="true"/>
+                <annotations>
+                    <annotation javaClass="javax.validation.constraints.NotNull"/>
+                </annotations>
+            </property>
+        </properties>
+    </type>
+    <type name="Account" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="name" type="String">
+                <description>Unique name of account</description>
+                <modifiers unique="true"/>
+                <annotations>
+                    <annotation javaClass="javax.validation.constraints.NotNull"/>
+                </annotations>
+            </property>
+            <property name="description" type="String">
+                <description>Description of account</description>
+            </property>
+            <property name="iban" type="String">
+                <description>IBAN</description>
+            </property>
+            <property name="active" type="Boolean">
+                <description>Account is actively used</description>
+            </property>
+        </properties>
+    </type>
+
+</types>
