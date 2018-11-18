@@ -25,6 +25,9 @@ public class Init extends ModuleInit {
 		try {
 			importScript("/data/sample/payee.impex", "Importing Payee");
 			importScript("/data/sample/account.impex", "Importing Accounts");
+			importScript("/data/sample/product.impex", "Importing Products");
+			importScript("/data/sample/receipt.impex", "Importing Receipts");
+			importScript("/data/sample/receiptentry.impex", "Importing Receipt Entries");
 			importScript("/data/sample/transaction.impex", "Importing Transactions");
 		} catch (final ImportException e) {
 			Logger.warn("Could not import initial data: " + e.getMessage());

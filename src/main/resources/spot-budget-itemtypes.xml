@@ -2,36 +2,6 @@
 <types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="http://spot-next.io/schemas/v2/itemtypes.xsd">
 
-    <type name="Transaction" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
-        <properties>
-            <property name="payee" type="Payee">
-                <description>Unique Payee name</description>
-                <annotations>
-                    <annotation javaClass="javax.validation.constraints.NotNull"/>
-                </annotations>
-            </property>
-            <property name="account" type="Account">
-                <description>Transaction account</description>
-            </property>
-            <property name="amount" type="Double">
-                <description>Transaction amount</description>
-            </property>
-            <property name="date" type="LocalDateTime">
-                <description>Tansaction date</description>
-            </property>
-        </properties>
-    </type>
-    <type name="Payee" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
-        <properties>
-            <property name="name" type="String">
-                <description>Unique, notnull name of Payee</description>
-                <modifiers unique="true"/>
-                <annotations>
-                    <annotation javaClass="javax.validation.constraints.NotNull"/>
-                </annotations>
-            </property>
-        </properties>
-    </type>
     <type name="Account" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
         <properties>
             <property name="name" type="String">
@@ -52,5 +22,110 @@
             </property>
         </properties>
     </type>
+    <type name="Payee" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="name" type="String">
+                <description>Unique, notnull name of Payee</description>
+                <modifiers unique="true"/>
+                <annotations>
+                    <annotation javaClass="javax.validation.constraints.NotNull"/>
+                </annotations>
+            </property>
+        </properties>
+    </type>
+    <type name="Transaction" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="payee" type="Payee">
+                <description>Unique Payee name</description>
+            </property>
+            <property name="account" type="Account">
+                <description>Transaction account</description>
+            </property>
+            <property name="amount" type="Double">
+                <description>Transaction amount</description>
+            </property>
+            <property name="currency" type="Currency">
+                <description>Transaction amount</description>
+            </property>
+            <property name="date" type="LocalDateTime">
+                <description>Tansaction date</description>
+            </property>
+            <property name="receipt" type="TransactionReceipt">
+                <description>Representation of the Receipt</description>
+            </property>
+        </properties>
+    </type>
+
+    <type name="TransactionReceipt" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="id" type="String">
+                <description>Unique TransactionReceipt id</description>
+                <annotations>
+                    <annotation javaClass="javax.validation.constraints.NotNull"/>
+                </annotations>
+            </property>
+            <property name="date" type="LocalDateTime">
+                <description>Tansaction date</description>
+            </property>
+            <property name="amountTotal" type="Double">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="amountTax" type="Double">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="currency" type="Currency">
+                <description>Transaction amount</description>
+            </property>
+            <property name="entries" type="TransactionReceiptEntry">
+                <description>Rechnunspositionen</description>
+            </property>
+        </properties>
+    </type>
+    <type name="TransactionReceiptEntry" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="transactionReceipt" type="TransactionReceipt">
+                <description></description>
+            </property>
+            <property name="amount" type="Double">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="amountTax" type="Double">
+                <description></description>
+            </property>
+            <property name="product" type="Product">
+                <description></description>
+            </property>
+        </properties>
+    </type>
+
+    <relation name="TransactionReceipt2TransactionReceiptEntry">
+        <source itemType="TransactionReceipt" mappedBy="entries" cardinality="many">
+            <description></description>
+        </source>
+        <target itemType="TransactionReceiptEntry" mappedBy="transactionReceipt" cardinality="one">
+            <description></description>
+        </target>
+    </relation>
+
+    <type name="Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+        <properties>
+            <property name="barcode" type="String">
+                <description>EAN / EAN-13 barcode</description>
+            </property>
+            <property name="producer" type="String">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="productDescription" type="String">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="receiptText" type="String">
+                <description>Total transaction amount</description>
+            </property>
+            <property name="openfoodfacts" type="String">
+                <description>Openfoodfacts ID</description>
+            </property>
+        </properties>
+    </type>
+
 
 </types>

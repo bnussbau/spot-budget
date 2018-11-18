@@ -1,0 +1,3 @@
+INSERT_UPDATE TransactionReceiptEntry; transactionReceipt(id); amount; amountTax; product(barcode)
+                                     ; 20181116SPAR          ; 2     ; 0.4      ; 9100000709444 ;
+#   ; 20181116SPAR          ; 3     ; 0.06     ; 9006833226465

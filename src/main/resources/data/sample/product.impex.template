@@ -1,0 +1,2 @@
+INSERT_UPDATE Product; barcode[unique = true]; receiptText        ; producer   ; productDescription ; openfoodfactsId
+                     ; 9100000709444         ; PRODUKTBEZRECHNUNG ; Hersteller ; Produktbezeichnung ; 9100000709444

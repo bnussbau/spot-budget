@@ -1,0 +1,2 @@
+INSERT_UPDATE TransactionReceipt; id           ; amountTotal; amountTax; currency(isoCode); date[resolver = localDateTimeValueResolver]
+                                ; 20181116SPAR ; 15         ; 2        ; eur              ; 2018-11-16T00:00:00
