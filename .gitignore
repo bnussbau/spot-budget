@@ -4,6 +4,8 @@
 /target
 /log
 /data
+/src/gen
 /src/main/resources/data/sample/product.impex
 /src/main/resources/data/sample/receipt.impex
 /src/main/resources/data/sample/receiptentry.impex
+/.flattened-pom.xml
