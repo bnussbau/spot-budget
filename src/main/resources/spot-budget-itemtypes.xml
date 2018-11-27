@@ -2,7 +2,7 @@
 <types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="http://spot-next.io/schemas/v2/itemtypes.xsd">
 
-    <type name="Account" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="Account" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
             <property name="name" type="String">
                 <description>Unique name of account</description>
@@ -22,7 +22,7 @@
             </property>
         </properties>
     </type>
-    <type name="Payee" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="Payee" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
             <property name="name" type="String">
                 <description>Unique, notnull name of Payee</description>
@@ -33,7 +33,7 @@
             </property>
         </properties>
     </type>
-    <type name="Transaction" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="Transaction" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
             <property name="payee" type="Payee">
                 <description>Unique Payee name</description>
@@ -56,7 +56,7 @@
         </properties>
     </type>
 
-    <type name="TransactionReceipt" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="TransactionReceipt" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
             <property name="id" type="String">
                 <description>Unique TransactionReceipt id</description>
@@ -81,7 +81,7 @@
             </property>
         </properties>
     </type>
-    <type name="TransactionReceiptEntry" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="TransactionReceiptEntry" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
             <property name="transactionReceipt" type="TransactionReceipt">
                 <description></description>
@@ -107,25 +107,71 @@
         </target>
     </relation>
 
-    <type name="Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes">
+    <type name="Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product">
         <properties>
-            <property name="barcode" type="String">
-                <description>EAN / EAN-13 barcode</description>
+            <property name="brand" type="String">
+                <description></description>
             </property>
-            <property name="producer" type="String">
-                <description>Total transaction amount</description>
+            <property name="name" type="String">
+                <description></description>
+            </property>
+            <property name="fullName" type="String">
+                <description></description>
             </property>
             <property name="productDescription" type="String">
-                <description>Total transaction amount</description>
+                <description></description>
             </property>
             <property name="receiptText" type="String">
-                <description>Total transaction amount</description>
+                <description></description>
             </property>
-            <property name="openfoodfacts" type="String">
+            <property name="category" type="String">
+                <description></description>
+            </property>
+            <property name="sparProductCode" type="String">
+                <description></description>
+            </property>
+        </properties>
+    </type>
+
+    <type name="EanProduct" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product" extends="Product">
+        <properties>
+            <property name="openfoodfactsId" type="String">
                 <description>Openfoodfacts ID</description>
             </property>
         </properties>
     </type>
+
+    <type name="Ean8Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product" extends="EanProduct">
+        <properties>
+            <property name="ean8code" type="Double">
+                <description>EAN / EAN-8 barcode</description>
+            </property>
+        </properties>
+    </type>
+
+    <type name="Ean13Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product" extends="EanProduct">
+        <properties>
+            <property name="ean13code" type="Double" unique="true">
+                <description>EAN / EAN-13 barcode</description>
+            </property>
+            <property name="variableEan" type="Boolean" default="false">
+                <description></description>
+            </property>
+            <property name="variableEanDigits" type="Integer">
+                <description></description>
+            </property>
+        </properties>
+    </type>
+
+    <type name="BarcodeProduct" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product" extends="Product">
+        <properties>
+            <property name="barcode" type="String">
+                <description></description>
+            </property>
+        </properties>
+    </type>
+
+
 
 
 </types>

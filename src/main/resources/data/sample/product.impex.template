@@ -1,2 +1,81 @@
-INSERT_UPDATE Product; barcode[unique = true]; receiptText        ; producer   ; productDescription ; openfoodfactsId
-                     ; 9100000709444         ; PRODUKTBEZRECHNUNG ; Hersteller ; Produktbezeichnung ; 9100000709444
+INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText                ; brand               ; name                                                 ; openfoodfactsId; variableEan[default = false];
+                          ; 9100000709444           ; SBUDGET KUECHENROLLE       ;                     ;                                                      ; 9100000709444  ;
+                          ; 2208461001767           ; TIROLER MANN               ;                     ;                                                      ; 2208461001767  ;
+                          ; 2420495003405           ; FEINKOST                   ;                     ;                                                      ; 2420495003405  ;
+                          ; 9006833226465           ; SPAR SCHNITTLAUCH          ;                     ;                                                      ; 9006833226465  ;
+                          ; 2204179002263           ; SPAR BIO-KAERNTNER         ;                     ;                                                      ; 2204179002263  ;
+                          ; 9100000536989           ; BACKPAPIERBOEGEN           ;                     ;                                                      ; 9100000536989  ;
+                          ; 9120014960143           ; SPAR KNOBLAUCH             ;                     ;                                                      ; 9120014960143  ;
+                          ; 9100000054940           ; SBUDGET TAF.ESSIG 1L       ;                     ;                                                      ; 9100000054940  ;
+                          ; 9004652000013           ; ZWIEBEL                    ;                     ;                                                      ; 9004652000013  ;
+                          ; 9019100609007           ; NOEM SAUERRA               ;                     ; Sauerrahm 15 % Fett                                  ; 9019100609007  ;
+                          ; 9100000720364           ; SPAR HALLOUMI CHILI        ;                     ;                                                      ; 9100000720364  ;
+                          ; 2203002000674           ; BIO ZUCCHINI               ;                     ;                                                      ; 2203002000674  ;
+                          ; 9100000776255           ; SBUDGET FRISCHKAESE        ;                     ;                                                      ; 9100000776255  ;
+                          ; 9004680000436           ; SUPPENGRUEN                ;                     ;                                                      ; 9004680000436  ;
+                          ; 9004236748072           ; Kollegblock A4 kar. 80 Bl. ;                     ;                                                      ;                ;
+                          ; 5038862385206           ; SMOOTHIE                   ; Innocent            ; Smoothie                                             ; 5038862385206  ;
+                          ; 9100000808741           ; SPAR HUETT .BROTSPECK      ; Spar                ; Hütten Brot Schwarzbrot mit Speck & Zwiebel          ; 9100000808741  ;
+                          ; 9100000745213           ; SPAR HUETTENB. TOMAT.      ; Spar                ; Hüttenbrot - Weizenbrot mit Tomate-Mozzarella        ; 9100000745213  ;
+                          ; 9100000745237           ; SPAR HUETTENBROT           ; Spar                ; Hüttenbrot - Weizenbrot mit Pulled Pork              ; 9100000745237  ;
+                          ; 7613034996039           ; LION 60G                   ; Nestle              ; Lion 2 Pack                                          ; 7613034996039  ;
+                          ; 4388440072884           ; TODAY DENT MUNDSPÜLUNG     ; today               ; dent Mundspülung Classic                             ; 4388440072884  ;
+                          ; 4005900471574           ; NIVEA MEN ANTI-TRANSPIR    ; Nivea               ; Men Fresh Active Deodorant                           ; 4005900471574  ;
+                          ; 4005900445711           ; NIVEA HAARSPRAY            ; Nivea               ; Nivea volume sensation Haarspray Volumen             ; 4005900445711  ;
+                          ; 3014260004873           ; GILLETTE RASIERSCHAUM      ; Gillette            ; Foam                                                 ; 3014260004873  ;
+                          ; 2208143001580           ; SPAR BIO-SONNENB.WE.       ; Spar                ;                                                      ; 2208143001580  ;
+                          ; 9004584054283           ; SALZBURGMILCH GOUDA        ; Spar                ;                                                      ; 9004584054283  ;
+                          ; 9100000081205           ; SPAR BABYBREZEL. 200G      ; Spar                ;                                                      ; 9100000081205  ;
+                          ; 9100000813356           ; SPAR BBQ GRILL-GEM.        ; Spar                ; BBQ Grill-Gemüse-Trilogie                            ; 9100000813356  ;
+                          ; 9120051670739           ; NENI TOMATEN HUMMUS        ; Neni                ;                                                      ; 9120051670739  ;
+                          ; 9001563310309           ; GUTSHOF FL GR. M 10        ; Gutshof             ; Eier aus Freilandhaltung                             ; 9001563310309  ;
+                          ; 9006833226465           ; SPAR SCHNITTLAUCH          ; Spar                ;                                                      ; 9006833226465  ;
+                          ; 9100000776255           ; SBUOGET FRISCHKAESE        ; SBudget             ;                                                      ; 9100000776255  ;
+                          ; 9019100609007           ; NOEM SAUERRA               ; Nöm                 ; Sauerrahm 15 % Fett                                  ; 9019100609007  ;
+                          ; 2203002000421           ; BIO ZUCCHINI               ; Spar                ;                                                      ; 2203002000421  ;
+                          ; 9019100617101           ; SCHLAGOBERS 250ML          ;                     ; Schlagobers 36% Fett länger frisch                   ; 9019100617101  ;
+                          ; 9100000113043           ; SBUDGET CREMEFRAICHE       ; SBudget             ;                                                      ; 9100000113043  ;
+                          ; 2203224000599           ; SUESSKARTOFFEL             ;                     ;                                                      ; 2203224000599  ;
+                          ; 9100000749853           ; SPAR THUNF. OEL            ; Spar                ; Thunfisch in Sonnenblumenöl                          ; 9100000749853  ;
+                          ; 9100000739786           ; VEGGIE GYROS               ; Spar                ; Veganes Bio-Gyros                                    ; 9100000739786  ;
+                          ; 8712100492976           ;                            ;                     ; Cremissimo Bourbon Vanille                           ; 8712100492976  ;
+                          ; 4099200018911           ; COTTAGE CHEESE 250 G       ; milfina             ;                                                      ; 4099200018911  ;
+                          ; 4099200017105           ; ZZU_BIO-BEINSCHINKEN 150G  ; Zurück zum Ursprung ;                                                      ; 4099200017105  ;
+                          ; 4099200011288           ; TK-RIESENGARNELEN          ; Hofer               ;                                                      ; 4099200011288  ;
+                          ; 4099200105307           ; TK-PFANNENGEMÜSE           ; Hofer               ;                                                      ; 4099200105307  ;
+                          ; 4099200021201           ; TEEBUTTER 250 G            ; milfina             ;                                                      ; 4099200021201  ;
+                          ; 4099200029115           ; SAUERRAHM 250 G            ; milfina             ;                                                      ; 4099200029115  ;
+                          ; 9100000767499           ;                            ; Spar                ; Baguette Korn Premium                                ; 9100000767499  ;
+                          ; 2208109001791           ;                            ; Spar Premium        ; Blumauer-Cherry-Tomaten - Cherrytomaten an der Rispe ; 2208109001791  ;
+                          ; 9088880502099           ;                            ; Bayer               ; Bepanthen Creme                                      ; 9088880502099  ;
+
+
+
+INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText; brand             ; name              ; openfoodfactsId; variableEan[default = true]; variableEanDigits[default = 4];
+                          ; 2331667007063           ; LACHSFILET ; Spar Fisch-Genuss ; Lachsfilet frisch ; 2331667007063  ;                            ;
+
+INSERT_UPDATE Ean8Product; ean8code ; receiptText             ; brand               ; name; openfoodfactsId
+                         ; 24014328 ; TK-SPINAT               ; Hofer               ;     ; 24014328
+                         ; 24057059 ; TK-MSC POLARDORSCH 400G ; Hofer               ;     ; 24057059
+                         ; 24086004 ; BROKKOLI                ; Hofer               ;     ; 24086004
+                         ; 24044219 ; ZZU_BIO-FRISCHKÄSE      ; Zurück zum Ursprung ;     ; 24044219 ;
+
+INSERT_UPDATE BarcodeProduct; barcode        ; receiptText          ; brand               ; name                      ;
+                            ; 10152875152349 ; IKEA 365+ IHÄRDIG Ge ; IKEA                ;                           ;
+                            ; 20214340230009 ; BLANDA MATT Servschü ; IKEA                ;                           ;
+                            ; 20318960189449 ; LYCKAD Ofenform 23x1 ; IKEA                ;                           ;
+                            ; 20317079168519 ; SPRUTTIG Kleiderbüge ; IKEA                ;                           ;
+                            ; 60301707124139 ; FRAKTA N Tasche m 36 ; IKEA                ;                           ;
+                            ; 60047151175919 ; JATTENE Umzkart 56x3 ; IKEA                ;                           ;
+                            ; 30291743224469 ; VARDERA Bech 17 cl w ; IKEA                ;                           ;
+                            ; 766298101729   ;                      ; pure encapsulations ; Magnesium Magnesiumcitrat ;
+
+INSERT_UPDATE Product; receiptText        ; brand               ; name
+                     ; SPAR PAPRIKA ROT   ;                     ;
+                     ; RISPENTOMATEN LOSE ;                     ;
+                     ; KARFIOL            ; Spar                ;
+                     ; ZZU_BIO-KRÄUTER    ; Zurück zum Ursprung ;
+                     ; RISPENTOMATEN      ; Hofer               ;
+                     ; LAUGENBREZEL       ; Hofer               ;
+                     ; LAUGENBREZEL       ; Hofer               ;
+                     ; ROGGENWECKERL      ; Hofer               ;
