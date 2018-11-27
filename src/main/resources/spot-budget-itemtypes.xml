@@ -151,7 +151,7 @@
 
     <type name="Ean13Product" package="at.benjaminnussbaum.spotbudget.types.itemtypes.product" extends="EanProduct">
         <properties>
-            <property name="ean13code" type="Double" unique="true">
+            <property name="ean13code" type="String" unique="true">
                 <description>EAN / EAN-13 barcode</description>
             </property>
             <property name="variableEan" type="Boolean" default="false">
