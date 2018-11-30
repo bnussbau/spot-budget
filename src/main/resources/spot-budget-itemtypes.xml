@@ -58,7 +58,7 @@
 
     <type name="TransactionReceipt" package="at.benjaminnussbaum.spotbudget.types.itemtypes.transaction">
         <properties>
-            <property name="id" type="String">
+            <property name="receiptId" type="String">
                 <description>Unique TransactionReceipt id</description>
                 <annotations>
                     <annotation javaClass="javax.validation.constraints.NotNull"/>

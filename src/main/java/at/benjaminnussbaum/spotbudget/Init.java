@@ -5,6 +5,7 @@ import io.spotnext.core.infrastructure.exception.ImportException;
 import io.spotnext.core.infrastructure.exception.ModuleInitializationException;
 import io.spotnext.core.infrastructure.support.Logger;
 import io.spotnext.core.infrastructure.support.init.ModuleInit;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {"at.benjaminnussbaum.spotbudget"})
@@ -35,7 +36,7 @@ public class Init extends ModuleInit {
 	}
 	
 	public static void main(final String[] args) throws Exception {
-		ModuleInit.bootstrap(CoreInit.class, Init.class, args);
+		ModuleInit.bootstrap(CoreInit.class, Init.class, (b) -> b.web(WebApplicationType.SERVLET), args);
 	}
 	
 }
