@@ -1,10 +1,11 @@
 package at.benjaminnussbaum.spotbudget.endpoints;
 
 import at.benjaminnussbaum.spotbudget.service.SparProductResolverService;
-import io.spotnext.core.persistence.query.QueryResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 
@@ -14,11 +15,16 @@ public class ProductResolverEndpoint {
 	@Resource
 	SparProductResolverService sparProductResolverService;
 	
-	@GetMapping("/resolveProducts")
-	public ResponseEntity<String> resolveProducts(){
-		QueryResult<at.benjaminnussbaum.spotbudget.types.itemtypes.product.Product> products =
-				sparProductResolverService.resolveProducts();
-		return ResponseEntity.ok().body("hello");
+	@GetMapping("/fetchProduct/{id}")
+	public ResponseEntity resolveProducts(@PathVariable("id") String id, @RequestParam("resolver") String resolverClass){
+		sparProductResolverService.resolveProduct(id);
+		return ResponseEntity.ok().build();
+	}
+	
+	@GetMapping("/fetchProducts")
+	public ResponseEntity resolveProducts(@RequestParam("resolver") String resolverClass){
+		sparProductResolverService.resolveAllProducts();
+		return ResponseEntity.ok().build();
 	}
 	
 }
