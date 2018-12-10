@@ -1,5 +1,5 @@
 INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText                ; brand               ; name                                                 ; openfoodfactsId; variableEan[default = false];
-                          ; 9100000709444           ; SBUDGET KUECHENROLLE       ;                     ;                                                      ; 9100000709444  ;
+#   ; 9100000709444           ; SBUDGET KUECHENROLLE       ;                     ;                                                      ; 9100000709444  ;
                           ; 2208461001767           ; TIROLER MANN               ;                     ;                                                      ; 2208461001767  ;
                           ; 2420495003405           ; FEINKOST                   ;                     ;                                                      ; 2420495003405  ;
                           ; 9006833226465           ; SPAR SCHNITTLAUCH          ;                     ;                                                      ; 9006833226465  ;
@@ -8,7 +8,6 @@ INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText               
                           ; 9120014960143           ; SPAR KNOBLAUCH             ;                     ;                                                      ; 9120014960143  ;
                           ; 9100000054940           ; SBUDGET TAF.ESSIG 1L       ;                     ;                                                      ; 9100000054940  ;
                           ; 9004652000013           ; ZWIEBEL                    ;                     ;                                                      ; 9004652000013  ;
-                          ; 9019100609007           ; NOEM SAUERRA               ;                     ; Sauerrahm 15 % Fett                                  ; 9019100609007  ;
                           ; 9100000720364           ; SPAR HALLOUMI CHILI        ;                     ;                                                      ; 9100000720364  ;
                           ; 2203002000674           ; BIO ZUCCHINI               ;                     ;                                                      ; 2203002000674  ;
                           ; 9100000776255           ; SBUDGET FRISCHKAESE        ;                     ;                                                      ; 9100000776255  ;
@@ -30,7 +29,6 @@ INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText               
                           ; 9120051670739           ; NENI TOMATEN HUMMUS        ; Neni                ;                                                      ; 9120051670739  ;
                           ; 9001563310309           ; GUTSHOF FL GR. M 10        ; Gutshof             ; Eier aus Freilandhaltung                             ; 9001563310309  ;
                           ; 9006833226465           ; SPAR SCHNITTLAUCH          ; Spar                ;                                                      ; 9006833226465  ;
-                          ; 9100000776255           ; SBUOGET FRISCHKAESE        ; SBudget             ;                                                      ; 9100000776255  ;
                           ; 9019100609007           ; NOEM SAUERRA               ; Nöm                 ; Sauerrahm 15 % Fett                                  ; 9019100609007  ;
                           ; 2203002000421           ; BIO ZUCCHINI               ; Spar                ;                                                      ; 2203002000421  ;
                           ; 9019100617101           ; SCHLAGOBERS 250ML          ;                     ; Schlagobers 36% Fett länger frisch                   ; 9019100617101  ;
@@ -48,17 +46,23 @@ INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText               
                           ; 9100000767499           ;                            ; Spar                ; Baguette Korn Premium                                ; 9100000767499  ;
                           ; 2208109001791           ;                            ; Spar Premium        ; Blumauer-Cherry-Tomaten - Cherrytomaten an der Rispe ; 2208109001791  ;
                           ; 9088880502099           ;                            ; Bayer               ; Bepanthen Creme                                      ; 9088880502099  ;
-
+                          ; 4015100182309           ; FA MEN DUSCHGEL            ;
+                          ; 8001090093905           ; PANTENE PRO-V SHAMPOO      ;
+                          ; 4002448044109           ; CLEARASIL GESICHTSPEELING  ;
+                          ; 9100000158976           ; SPAR VEGGIE CRISPY R       ; Spar veggie         ; Vegane Crispy Rolls                                  ; 9100000158976  ;
+                          ; 9100000157641           ; SPAR MINI ROESTI 750       ; Spar                ; Mini Kartoffel Rösti                                 ; 9100000157641  ;
+                          ; 9008695968927           ; IGLO IDEENKUECHE BUL       ; Iglo                ; Ideenküche mit Zucchini Bulgur                       ; 9008695968927
 
 
 INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText; brand             ; name              ; openfoodfactsId; variableEan[default = true]; variableEanDigits[default = 4];
                           ; 2331667007063           ; LACHSFILET ; Spar Fisch-Genuss ; Lachsfilet frisch ; 2331667007063  ;                            ;
 
-INSERT_UPDATE Ean8Product; ean8code ; receiptText             ; brand               ; name; openfoodfactsId
-                         ; 24014328 ; TK-SPINAT               ; Hofer               ;     ; 24014328
-                         ; 24057059 ; TK-MSC POLARDORSCH 400G ; Hofer               ;     ; 24057059
-                         ; 24086004 ; BROKKOLI                ; Hofer               ;     ; 24086004
-                         ; 24044219 ; ZZU_BIO-FRISCHKÄSE      ; Zurück zum Ursprung ;     ; 24044219 ;
+INSERT_UPDATE Ean8Product; ean8code ; receiptText             ; brand               ; fullName                               ; openfoodfactsId
+                         ; 24014328 ; TK-SPINAT               ; Hofer               ;                                        ; 24014328
+                         ; 24057059 ; TK-MSC POLARDORSCH 400G ; Hofer               ;                                        ; 24057059
+                         ; 24086004 ; BROKKOLI                ; Hofer               ;                                        ; 24086004
+                         ; 24044219 ; ZZU_BIO-FRISCHKÄSE      ; Zurück zum Ursprung ;                                        ; 24044219
+                         ; 42349105 ; NIVEA MEN ANTI-TRANSPIR ; NIVEA MEN           ; NIVEA MEN Deostick Fresh Active, 40 ml ;
 
 INSERT_UPDATE BarcodeProduct; barcode        ; receiptText          ; brand               ; name                      ;
                             ; 10152875152349 ; IKEA 365+ IHÄRDIG Ge ; IKEA                ;                           ;
@@ -70,12 +74,93 @@ INSERT_UPDATE BarcodeProduct; barcode        ; receiptText          ; brand     
                             ; 30291743224469 ; VARDERA Bech 17 cl w ; IKEA                ;                           ;
                             ; 766298101729   ;                      ; pure encapsulations ; Magnesium Magnesiumcitrat ;
 
-INSERT_UPDATE Product; receiptText        ; brand               ; name
-                     ; SPAR PAPRIKA ROT   ;                     ;
-                     ; RISPENTOMATEN LOSE ;                     ;
-                     ; KARFIOL            ; Spar                ;
-                     ; ZZU_BIO-KRÄUTER    ; Zurück zum Ursprung ;
-                     ; RISPENTOMATEN      ; Hofer               ;
-                     ; LAUGENBREZEL       ; Hofer               ;
-                     ; LAUGENBREZEL       ; Hofer               ;
-                     ; ROGGENWECKERL      ; Hofer               ;
+INSERT_UPDATE PriceRow; product(ean13code)[unique = true]; amount; currency(isoCode); date[resolver = localDateTimeValueResolver]; provider
+# ; 9100000709444                    ; 2.19  ; eur              ; 2018-12-01T00:00:00                        ; WEBSERVICE
+                      ; 2208461001767                    ; 1.76  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2420495003405                    ; 3.4   ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9006833226465                    ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2204179002263                    ; 2.26  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000536989                    ; 0.95  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9120014960143                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000054940                    ; 0.39  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9004652000013                    ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9019100609007                    ; 0.95  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000720364                    ; 2.24  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2203002000674                    ; 0.67  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000776255                    ; 0.83  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9004680000436                    ; 1.69  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9004236748072                    ; 2.49  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 5038862385206                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000808741                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000745213                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000745237                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 7613034996039                    ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4388440072884                    ; 1.25  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4005900471574                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4005900445711                    ; 3.39  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 3014260004873                    ; 2.39  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2208143001580                    ; 1.58  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9004584054283                    ; 2.19  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000081205                    ; 0.59  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000813356                    ; 2.79  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9120051670739                    ; 2.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9001563310309                    ; 2.59  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9006833226465                    ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000776255                    ; 0.89  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9019100609007                    ; 0.95  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2203002000421                    ; 0.42  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9019100617101                    ; 1.29  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000113043                    ; 0.59  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 2203224000599                    ; 0.59  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000749853                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000739786                    ; 2.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200018911                    ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200017105                    ; 3.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200011288                    ; 4.49  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200105307                    ; 1.55  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200021201                    ; 1.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 4099200029115                    ; 0.59  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000767499                    ; 1.79  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+                      ; 9100000158976                    ; 3.99  ; eur              ; 2018-12-05T00:00:00                        ; RECEIPT ;
+                      ; 9100000157641                    ; 1.99  ; eur              ; 2018-12-05T00:00:00                        ; RECEIPT ;
+                      ; 9008695968927                    ; 2.99  ; eur              ; 2018-12-05T00:00:00                        ; RECEIPT ;
+
+UPDATE Ean13Product; ean13code[unique = true]; receiptText           ; sparProductCode;
+#      ; 9100000709444           ; SBUDGET KUECHENROLLE  ; 2020000926726
+                   ; 9100000054940           ; SBUDGET TAF.ESSIG 1L  ; 6461317
+                   ; 9019100609007           ; NOEM SAUERRA          ; 2729527
+                   ; 9100000776255           ; SBUDGET FRISCHKAESE   ; 1999822
+                   ; 9100000745213           ; SPAR HUETTENB. TOMAT. ; 2020002386337
+                   ; 9100000113043           ; SBUDGET CREMEFRAICHE  ; 7840739
+                   ; 9100000749853           ; SPAR THUNF. OEL       ; 2628684
+                   ; 9100000739786           ; VEGGIE GYROS          ; 1125412
+                   ; 4099200018911           ; COTTAGE CHEESE 250 G  ; 2020002248253
+                   ; 9100000813356           ; SPAR BBQ GRILL-GEM.   ; 2020001842452
+                   ; 9100000157641           ; SPAR MINI ROESTI 750  ; 2020002700188
+                   ; 9008695968927           ; IGLO IDEENKUECHE BUL  ; 2020002740092
+                   ; 9100000158976           ; SPAR VEGGIE CRISPY R  ; 2020002742317
+
+INSERT Product; receiptText        ; brand               ; &ref
+              ; SPAR PAPRIKA ROT   ; Spar                ; SPAR PAPRIKA ROT
+              ; RISPENTOMATEN LOSE ; Spar                ; RISPENTOMATEN LOSE
+              ; KARFIOL            ; Spar                ; KARFIOL
+              ; ZZU_BIO-KRÄUTER    ; Zurück zum Ursprung ; ZZU_BIO-KRÄUTER
+              ; RISPENTOMATEN      ; Hofer               ; RISPENTOMATEN
+              ; LAUGENBREZEL       ; Hofer               ; LAUGENBREZEL
+              ; ROGGENWECKERL      ; Hofer               ; ROGGENWECKERL
+
+INSERT PriceRow; product(&ref)    ; amount; currency(isoCode); date[resolver = localDateTimeValueResolver]; provider;
+               ; SPAR PAPRIKA ROT ; 0.99  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+               ; KARFIOL          ; 1.19  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+               ; ZZU_BIO-KRÄUTER  ; 1.89  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+               ; LAUGENBREZEL     ; 0.29  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+               ; ROGGENWECKERL    ; 0.29  ; eur              ; 2018-12-01T00:00:00                        ; RECEIPT ;
+
+INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText          ; &ref
+                          ; 9100000709444           ; SBUDGET KUECHENROLLE ; 9100000709444
+
+UPDATE Ean13Product; ean13code[unique = true]; receiptText          ; sparProductCode;
+                   ; 9100000709444           ; SBUDGET KUECHENROLLE ; 2020000926726
+
+INSERT PriceRow; product(&ref) ; amount;
+               ; 9100000709444 ; 2.19  ;
