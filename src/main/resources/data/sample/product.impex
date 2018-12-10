@@ -57,22 +57,22 @@ INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText               
 INSERT_UPDATE Ean13Product; ean13code[unique = true]; receiptText; brand             ; name              ; openfoodfactsId; variableEan[default = true]; variableEanDigits[default = 4];
                           ; 2331667007063           ; LACHSFILET ; Spar Fisch-Genuss ; Lachsfilet frisch ; 2331667007063  ;                            ;
 
-INSERT_UPDATE Ean8Product; ean8code ; receiptText             ; brand               ; fullName                               ; openfoodfactsId
-                         ; 24014328 ; TK-SPINAT               ; Hofer               ;                                        ; 24014328
-                         ; 24057059 ; TK-MSC POLARDORSCH 400G ; Hofer               ;                                        ; 24057059
-                         ; 24086004 ; BROKKOLI                ; Hofer               ;                                        ; 24086004
-                         ; 24044219 ; ZZU_BIO-FRISCHKÄSE      ; Zurück zum Ursprung ;                                        ; 24044219
-                         ; 42349105 ; NIVEA MEN ANTI-TRANSPIR ; NIVEA MEN           ; NIVEA MEN Deostick Fresh Active, 40 ml ;
+INSERT_UPDATE Ean8Product; ean8code[unique=true] ; receiptText             ; brand               ; fullName                               ; openfoodfactsId
+                         ; 24014328              ; TK-SPINAT               ; Hofer               ;                                        ; 24014328
+                         ; 24057059              ; TK-MSC POLARDORSCH 400G ; Hofer               ;                                        ; 24057059
+                         ; 24086004              ; BROKKOLI                ; Hofer               ;                                        ; 24086004
+                         ; 24044219              ; ZZU_BIO-FRISCHKÄSE      ; Zurück zum Ursprung ;                                        ; 24044219
+                         ; 42349105              ; NIVEA MEN ANTI-TRANSPIR ; NIVEA MEN           ; NIVEA MEN Deostick Fresh Active, 40 ml ;
 
-INSERT_UPDATE BarcodeProduct; barcode        ; receiptText          ; brand               ; name                      ;
-                            ; 10152875152349 ; IKEA 365+ IHÄRDIG Ge ; IKEA                ;                           ;
-                            ; 20214340230009 ; BLANDA MATT Servschü ; IKEA                ;                           ;
-                            ; 20318960189449 ; LYCKAD Ofenform 23x1 ; IKEA                ;                           ;
-                            ; 20317079168519 ; SPRUTTIG Kleiderbüge ; IKEA                ;                           ;
-                            ; 60301707124139 ; FRAKTA N Tasche m 36 ; IKEA                ;                           ;
-                            ; 60047151175919 ; JATTENE Umzkart 56x3 ; IKEA                ;                           ;
-                            ; 30291743224469 ; VARDERA Bech 17 cl w ; IKEA                ;                           ;
-                            ; 766298101729   ;                      ; pure encapsulations ; Magnesium Magnesiumcitrat ;
+INSERT_UPDATE BarcodeProduct; barcode[unique=true]   ; receiptText          ; brand               ; name                      ;
+                            ; 10152875152349         ; IKEA 365+ IHÄRDIG Ge ; IKEA                ;                           ;
+                            ; 20214340230009         ; BLANDA MATT Servschü ; IKEA                ;                           ;
+                            ; 20318960189449         ; LYCKAD Ofenform 23x1 ; IKEA                ;                           ;
+                            ; 20317079168519         ; SPRUTTIG Kleiderbüge ; IKEA                ;                           ;
+                            ; 60301707124139         ; FRAKTA N Tasche m 36 ; IKEA                ;                           ;
+                            ; 60047151175919         ; JATTENE Umzkart 56x3 ; IKEA                ;                           ;
+                            ; 30291743224469         ; VARDERA Bech 17 cl w ; IKEA                ;                           ;
+                            ; 766298101729           ;                      ; pure encapsulations ; Magnesium Magnesiumcitrat ;
 
 INSERT_UPDATE PriceRow; product(ean13code)[unique = true]; amount; currency(isoCode); date[resolver = localDateTimeValueResolver]; provider
 # ; 9100000709444                    ; 2.19  ; eur              ; 2018-12-01T00:00:00                        ; WEBSERVICE
