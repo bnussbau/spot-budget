@@ -22,7 +22,7 @@ public class Init extends ModuleInit {
 	
 	@Override
 	protected void importSampleData() throws ModuleInitializationException {
-		super.importSampleData();
+		//super.importSampleData();
 		try {
 			importScript("/data/sample/payee.impex", "Importing Payee");
 			importScript("/data/sample/account.impex", "Importing Accounts");
