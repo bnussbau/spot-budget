@@ -1,0 +1,2 @@
+INSERT_UPDATE Transaction; payee(name)[unique=true] ; account(name)[unique=true] ; amount; date[resolver = localDateTimeValueResolver]
+                         ; Spar                     ; CASH                       ; 15    ; 2018-11-16T00:00:00
