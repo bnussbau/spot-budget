@@ -1,0 +1,2 @@
+INSERT_UPDATE TransactionReceiptEntry; transactionReceipt(receiptId)[unique = true]; amount; amountTax;
+                                     ; 20181116SPAR                                ; 2     ; 0.4      ;
